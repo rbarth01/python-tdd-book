@@ -3,4 +3,6 @@ geckodriver.log
 virtualenv
 __pycache__
 *.pyc
-/static
+./static
+functional_tests/screendumps
+.env
