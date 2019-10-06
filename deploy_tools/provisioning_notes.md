@@ -23,12 +23,6 @@ eg, on Ubuntu:
 
 * see gunicorn-systemd.template.service
 * replace DOMAIN with, e.g., staging.my-domain.com
-* replace SEKRIT with email password
-* Use this snippet to generate a unique secret key:
-
-python -c"import random; print(''.join(random.SystemRandom().
-choices('abcdefghijklmnopqrstuvwxyz0123456789%^*(-_=+)', k=50)))"
-
 
 ## Folder structure:
 
@@ -37,11 +31,13 @@ Assume we have a user account at /home/username
 /home/username
 └── sites
     ├── DOMAIN1
+    │    ├── .env
     │    ├── db.sqlite3
     │    ├── manage.py etc
     │    ├── static
     │    └── virtualenv
     └── DOMAIN2
+         ├── .env
          ├── db.sqlite3
-         ├── manage.py etc
+         ├── etc
 
