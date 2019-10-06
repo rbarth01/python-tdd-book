@@ -1,14 +1,14 @@
 [Unit]
-Description=Gunicorn server for DOMAIN
+Description=Gunicorn server for rbarth01.net
 
 [Service]
 Restart=on-failure
-User=elspeth
-WorkingDirectory=/home/elspeth/sites/DOMAIN
-EnvironmentFile=/home/elspeth/sites/DOMAIN/.env
+User=ubuntu
+WorkingDirectory=/home/ubuntu/sites/rbarth01.net
+EnvironmentFile=/home/ubuntu/sites/rbarth01.net/.env
 
-ExecStart=/home/elspeth/sites/DOMAIN/virtualenv/bin/gunicorn \
-    --bind unix:/tmp/DOMAIN.socket \
+ExecStart=/home/ubuntu/sites/rbarth01.net/virtualenv/bin/gunicorn \
+    --bind unix:/tmp/rbarth01.net.socket \
     superlists.wsgi:application
 
 [Install]
