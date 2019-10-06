@@ -2,6 +2,7 @@ import random
 from fabric.contrib.files import exists
 from fabric.api import cd, env, local, run
 
+
 REPO_URL = 'https://github.com/rbarth01/python-tdd-book.git'
 
 
