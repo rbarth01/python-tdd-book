@@ -1,12 +1,14 @@
+import random
 from fabric.contrib.files import exists
 from fabric.api import cd, env, local, run
 
-REPO_URL = 'https://github.com/hjwp/book-example.git'
+REPO_URL = 'https://github.com/rbarth01/python-tdd-book.git'
+
 
 
 def deploy():
-    site_folder = f'/home/{env.user}/sites/{env.host}'
-    run(f'mkdir -p {site_folder}')
+    site_folder = f'/home/ubuntu/sites/rbarth01.net'
+    run (f'mkdir -p {site_folder}')
     with cd(site_folder):
         _get_latest_source()
         _update_virtualenv()
