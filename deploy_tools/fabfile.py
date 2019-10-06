@@ -6,11 +6,7 @@ REPO_URL = 'https://github.com/rbarth01/python-tdd-book.git'
 
 
 def deploy():
-<<<<<<< HEAD
-    site_folder = f'/home/ubuntu/sites/staging.rbarth01.net'
-=======
     site_folder = f'/home/ubuntu/sites/rbarth01.net'
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
     run(f'mkdir -p {site_folder}')
     with cd(site_folder):
         _get_latest_source()
@@ -37,11 +33,8 @@ def _update_virtualenv():
 
 def _create_or_update_dotenv():
     append('.env', 'DJANGO_DEBUG_FALSE=y')
-<<<<<<< HEAD
     append('.env', f'SITENAME=staging.rbarth01.net')
-=======
     append('.env', f'SITENAME=rbarth01.net')
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
     current_contents = run('cat .env')
     if 'DJANGO_SECRET_KEY' not in current_contents:
         new_secret = ''.join(random.SystemRandom().choices(

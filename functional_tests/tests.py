@@ -16,10 +16,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         if staging_server:
             self.live_server_url = 'http://' + staging_server
 
-<<<<<<< HEAD
 
-=======
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
     def tearDown(self):
         self.browser.quit()
 
@@ -122,22 +119,13 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.assertIn('Buy milk', page_text)
 
         # Satisfied, they both go back to sleep
-<<<<<<< HEAD
 
 
-=======
-        
-        
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
     def test_layout_and_styling(self):
         # Edith goes to the home page
         self.browser.get(self.live_server_url)
         self.browser.set_window_size(1024, 768)
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
         # She notices the input box is nicely centered
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertAlmostEqual(
@@ -156,9 +144,5 @@ class NewVisitorTest(StaticLiveServerTestCase):
             inputbox.location['x'] + inputbox.size['width'] / 2,
             512,
             delta=10
-<<<<<<< HEAD
         )
 
-=======
-        )
->>>>>>> a9cb8ecde16f913c301f8409c24b9e71adc3c67b
