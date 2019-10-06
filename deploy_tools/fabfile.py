@@ -7,7 +7,7 @@ REPO_URL = 'https://github.com/rbarth01/python-tdd-book.git'
 
 
 def deploy():
-    site_folder = f'/home/ubuntu/sites/rbarth01.net'
+    site_folder = f'/home/ubuntu/sites/staging.rbarth01.net'
     run (f'mkdir -p {site_folder}')
     with cd(site_folder):
         _get_latest_source()
